@@ -23,9 +23,12 @@ resp = s3.put_object(
 )
 
 expires_in = 30
-
 response = s3.generate_presigned_url(
     'get_object',
     Params={'Bucket': bucket, 'Key': object_name},
     ExpiresIn=expires_in
 )
+
+#Revision to Submission Below
+#Added
+print(response)
